@@ -14,7 +14,7 @@ Date: August 22, 2024
 
 You can setup a VM from an Open Virtual Appliance or Application (OVA) file (.ova file).  An .ova file is a package format used for the distribution of Virtual machines (VMs).  This allows users to transfer, distribute, and deploy a VM with a single file.  The .ova file archive will typically contain the following:
 
-* .ovf (Open virtualization Format) file
+* .ovf (Open Virtualization Format) file
 * .vmdk (Virtual Machine Disk) file
 * .mf (Manifest) file
 
