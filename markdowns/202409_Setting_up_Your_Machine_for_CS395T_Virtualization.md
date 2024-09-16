@@ -82,11 +82,14 @@ Generally this step is enough to turn off Virtual-based security and you can con
 
 <img alt="Windows_Security_Device_Security_Core_Isolation_Memory_Integrity" src="../assets/202409_Setting_up_Your_Machine_for_CS395T_Virtualization/Windows_Security_Device_Security_Core_Isolation_Memory_Integrity.png" width="700" >
 
-Note: If this doesn't work you can look at disabling this through a registry edit, but be careful when applying this change.  See the referenced tom's hardware article on how to do this.
+Note: If this doesn't work you can look at disabling this through a group policy update and/or registry edit, but be careful when applying this change.  See the referenced tom's hardware article on how to do this.
+
+* Enable virtualization-based protection of code integrity (2024-Jul-10, Microsoft Learn, https://learn.microsoft.com/en-us/windows/security/hardware-security/enable-virtualization-based-protection-of-code-integrity#how-to-turn-on-memory-integrity)
+* Memory integrity and VBS enablement (2023-Apr-06, Microsoft Learn, https://learn.microsoft.com/en-us/windows-hardware/design/device-experiences/oem-hvci-enablement)
 
 #### Windows Virtualization Platform and Hypervisors
 
-Make sure Windows Features that uses Intel Virtualization Technologies are turned off.
+Make sure Windows Features that use Intel Virtualization Technologies are turned off.
 * Containers
 * Hyper-V
 * Microsoft Defender Application Guard
@@ -151,7 +154,7 @@ scp -P 2200 jos-vmm-project.zip vos@192.168.1.105:/home/vos/.ssh
 
 Notes: 
 * You could use a Bridged connection.
-* If you plan to do router port forwarding, so your VM is exposed to the internet, then ensure you harden your VM from unwanted access and attacks.  For example, turning on ufw firewall and using ssh key only access (meaning, disabling password authentication).  This will require you to do addition ssh config and agent configuration on the machine you are using to connect to the VM.
+* If you plan to do router port forwarding, so your VM is exposed to the internet, then ensure you harden your VM from unwanted access and attacks.  For example, turning on ufw firewall and using ssh key only access (meaning, disabling password authentication).  This will require you to do additional ssh config and agent configuration on the machine you are using to connect to the VM.
 
 <a id="reference"></a>
 
